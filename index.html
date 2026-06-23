@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMDb Play</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header class="header">
+
+        <h1>
+            <i class="fa-solid fa-film"></i>
+            IMDb Play
+        </h1>
+
+        <p>Paste an IMDb movie URL below.</p>
+
+    </header>
+
+    <!-- Search -->
+    <section class="search-box">
+
+        <div class="input-group">
+
+            <input
+                type="text"
+                id="imdbInput"
+                placeholder="https://www.imdb.com/title/tt1375666/"
+            >
+
+            <button id="generateBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Movie Card -->
+    <section class="movie-card">
+
+        <div class="poster">
+
+            <img
+                id="poster"
+                src="https://placehold.co/350x520?text=Movie+Poster"
+                alt="Poster"
+            >
+
+        </div>
+
+        <div class="movie-info">
+
+            <h2 id="movieTitle">
+                Movie Title
+            </h2>
+
+            <div class="rating">
+
+                <i class="fa-solid fa-star"></i>
+
+                <span id="movieRating">
+                    IMDb Rating
+                </span>
+
+            </div>
+
+            <div class="details">
+
+                <span id="movieGenre">
+                    Genre
+                </span>
+
+                <span>•</span>
+
+                <span id="movieRuntime">
+                    Runtime
+                </span>
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="watchBtn" class="watch">
+
+                    <i class="fa-solid fa-play"></i>
+
+                    Watch Now
+
+                </button>
+
+                <button id="copyBtn">
+
+                    <i class="fa-regular fa-copy"></i>
+
+                    Copy Link
+
+                </button>
+
+                <button id="favoriteBtn">
+
+                    <i class="fa-regular fa-star"></i>
+
+                    Favorite
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Generated URL -->
+    <section class="generated">
+
+        <h3>
+
+            <i class="fa-solid fa-link"></i>
+
+            Generated Play Link
+
+        </h3>
+
+        <input
+            id="generatedLink"
+            readonly
+            value=""
+        >
+
+    </section>
+
+    <!-- Recent -->
+    <section class="recent">
+
+        <h3>
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            Recent Movies
+
+        </h3>
+
+        <ul id="recentList">
+
+            <li>No recent movies.</li>
+
+        </ul>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
